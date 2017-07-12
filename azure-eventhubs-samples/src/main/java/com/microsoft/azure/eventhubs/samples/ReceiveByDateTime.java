@@ -28,7 +28,34 @@ public class ReceiveByDateTime
 		ConnectionStringBuilder connStr = new ConnectionStringBuilder(namespaceName, eventHubName, sasKeyName, sasKey);
 		
 		EventHubClient ehClient = EventHubClient.createFromConnectionString(connStr.toString()).get();
-		
+		String partitionIds[] = null;
+
+		try
+		{
+			EventHubRuntimeInformation ehInfo = ehClient.getRuntimeInformation().get();
+			if (ehInfo != null)
+			{
+				partitionIds = ehInfo.getPartitionIds();
+
+				System.out.println("Eventhub count of partitions: " + ehInfo.getPartitionCount());
+				for (String id : partitionIds)
+				{
+					System.out.println("Found partition with id: " + id);
+				}
+			}
+			else
+			{
+				System.out.println("getRuntimeInformation returned null");
+			}
+		}
+		catch (InterruptedException | ExecutionException e)
+		{
+			System.out.println("Exception: " + e.toString());
+		}
+
+
+
+
 		// receiver
 		String partitionId = "0"; // API to get PartitionIds will be released as part of V0.2
 		
