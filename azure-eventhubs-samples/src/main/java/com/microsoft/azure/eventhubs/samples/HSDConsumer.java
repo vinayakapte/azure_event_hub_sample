@@ -45,7 +45,7 @@ public class HSDConsumer {
 	                  receivedEvent.getSystemProperties().getSequenceNumber(), 
 	                  receivedEvent.getSystemProperties().getEnqueuedTime()));
 	                System.out.println(String.format("| Device ID: %s", receivedEvent.getSystemProperties().get("iothub-connection-device-id")));
-	                System.out.println(String.format("| Message Payload: %s", new String(receivedEvent.getBytes(),
+	                System.out.println(String.format("| Message Payload: %s", new String(receivedEvent.getBody(),
 	                  Charset.defaultCharset())));
 	                batchSize++;
 	              }
