@@ -21,7 +21,7 @@ public class ReceiveByDateTime
 	public static void main(String[] args) 
 			throws ServiceBusException, ExecutionException, InterruptedException, IOException
 	{
-		final String namespaceName = "sb://iothub-ns-tsp-device-173741-ce950a26f2.servicebus.windows.net/";
+		final String namespaceName = "iothub-ns-tsp-device-173741-ce950a26f2";
 		final String eventHubName = "tsp-device-hub";
 		final String sasKeyName = "iothubowner";
 		final String sasKey = "C+IipH2ZdaX6MgibSJNCc6LUt9ZyQHgFDanQWT64Vio=";
