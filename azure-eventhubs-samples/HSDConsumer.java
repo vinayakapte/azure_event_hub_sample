@@ -10,8 +10,7 @@ import java.util.function.*;
 
 public class HSDConsumer {
 	
-	private static String connStr = "Endpoint=sb://iothub-ns-tsp-device-173741-ce950a26f2.servicebus.windows.net/;DeviceId=simulator_002;SharedAccessKeyName=iothubowner;SharedAccessKey=C+IipH2ZdaX6MgibSJNCc6LUt9ZyQHgFDanQWT64Vio=;EntityPath=tsp-device-hub;SharedAccessKeyName=iothubowner;SharedAccessKey=C+IipH2ZdaX6MgibSJNCc6LUt9ZyQHgFDanQWT64Vio=";	
-	
+	private static String connStr = "Endpoint=sb://iothub-ns-tsp-device-173741-ce950a26f2.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=C+IipH2ZdaX6MgibSJNCc6LUt9ZyQHgFDanQWT64Vio=";	
 	private static EventHubClient receiveMessages(final String partitionId)
 	{
 	  EventHubClient client = null;
