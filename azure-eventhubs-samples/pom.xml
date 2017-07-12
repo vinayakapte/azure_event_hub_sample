@@ -12,11 +12,11 @@
 	<name>azure-eventhubs-samples</name>
 	    
 	<dependencies>
-	 	<dependency>
-	  		<groupId>com.microsoft.azure</groupId>
-	  		<artifactId>azure-eventhubs</artifactId>
-	  		<version>${project.parent.version}</version>
-	 	</dependency>
+	   	<dependency> 
+	   		<groupId>com.microsoft.azure</groupId> 
+	   		<artifactId>azure-eventhubs</artifactId> 
+	   		<version>0.14.3</version>
+	   	</dependency>
 	 	<dependency>
 	  		<groupId>com.microsoft.azure</groupId>
 	  		<artifactId>azure-eventhubs-eph</artifactId>
