@@ -27,12 +27,16 @@ public class EventProcessorSample
     	// can probably be left as-is. You will also need the connection string for an Azure Storage account,
     	// which is used to persist the lease and checkpoint data for this Event Hub.
     	String consumerGroupName = "$Default";
-    	String namespaceName = "----ServiceBusNamespaceName----";
-    	String eventHubName = "----EventHubName----";
-    	String sasKeyName = "----SharedAccessSignatureKeyName----";
-    	String sasKey = "----SharedAccessSignatureKey----";
-    	String storageConnectionString = "----AzureStorageConnectionString----";
-    	
+    	String namespaceName = "iothub-ns-tsp-device-173741-ce950a26f2";
+    	String eventHubName = "tsp-device-hub";
+    	String sasKeyName = "iothubowner";
+    	String sasKey = "C+IipH2ZdaX6MgibSJNCc6LUt9ZyQHgFDanQWT64Vio=";
+    	String storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=telematicsstorageacct;AccountKey=+4+oPfBhz0uIVDyyRpxGy+OQVbUXhv9Hq61FjLT6v3hpIt1bh8WfRGIky79x0ywzlTIbTTSLP44cZ2gdxgjaig==;EndpointSuffix=core.windows.net";
+/*        final String namespaceName = "iothub-ns-tsp-device-173741-ce950a26f2";
+        final String eventHubName = "tsp-device-hub";
+        final String sasKeyName = "iothubowner";
+        final String sasKey = "C+IipH2ZdaX6MgibSJNCc6LUt9ZyQHgFDanQWT64Vio=";
+*/
     	// To conveniently construct the Event Hub connection string from the raw information, use the ConnectionStringBuilder class.
     	ConnectionStringBuilder eventHubConnectionString = new ConnectionStringBuilder(namespaceName, eventHubName, sasKeyName, sasKey);
     	
